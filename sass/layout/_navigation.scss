@@ -1,0 +1,67 @@
+.navigation{
+    height: 7.5rem;
+    background: transparent;
+    position: fixed;
+    width: 100%;
+    z-index: 9999999;
+    &.scrolled {
+        background-color: var(--color-primary-dark) !important;
+        transition: background-color 200ms linear;
+        opacity: 0.97;
+        box-shadow: 0 1.4rem 3rem rgba(0,0,0,0.2);
+      }
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+
+        @media only screen and (max-width: $bg-iPad){
+            justify-content: space-evenly;
+        }
+        @media only screen and (max-width: $bg-iphone-6){
+           flex-direction: column;
+        }
+        .logo-box{
+
+            .heading-logo{
+                font-size: 1.9rem;
+
+                &__link{
+                    text-decoration: none;
+                    color: $color-typography-light;
+                    &:hover{
+                        color: $color-typography-light-2;
+                        transition: all .2s ease-out;
+                    }
+                }
+            }
+        }
+
+        .list-box{
+
+            .list{
+                list-style: none;
+                display: flex;
+
+                &__item{
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    
+                    &:not(:last-child){
+                        margin-right: 2.8rem;
+                    }
+
+                    &__link{
+                        text-decoration: none;
+                        color: $color-typography-light;
+                        &:hover{
+                            color: $color-typography-light-2;
+                            transition: all .2s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,191 @@
+.section-about{
+    background: $color-typography-light;
+    color: $color-typography-dark;
+    padding: 10rem 0;
+
+    .container{
+        .containerMin{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            @media only screen and (max-width: $bg-iphone-6){
+                text-align: center;
+              }
+        }
+
+    }
+}
+
+.section-services{
+    background: var(--color-primary-dark);
+    color: var(--color-typography-light);
+    padding: 10rem 0;
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .service-boxes-row{
+            display: flex;
+            @media only screen and (max-width: $bg-iphone-6){
+                flex-direction: column;
+              }
+        }
+        .service-boxes{
+            display: flex;
+            justify-content: space-between;
+           
+            @media only screen and (max-width: $bg-iPad){
+               flex-direction: column;
+               flex: 100%;
+            }
+
+            &-box{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 1rem;
+                @media only screen and (max-width: $bg-iPad){
+                    padding: 1rem;
+                    margin: 1rem; 
+                 }
+                 @media only screen and (max-width: $bg-iphone-6){
+                   &:not(:last-of-type){
+                    border-bottom: 2px solid var(--color-typography-light);
+                   }
+                  }
+                &__icon{
+                    font-size: 7rem;
+                    // color: var(--color-typography-light);
+                }
+            }
+        }
+    }
+}
+
+.section-portfolio{
+    // padding: 5rem 0;
+    
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
+  
+    .portfolio-container{
+        display: flex;
+        max-width: 100%;
+        height: 34rem;
+        @media only screen and (max-width: $bg-iPad){
+            flex-direction: column; 
+            max-height: 100%;
+            height: auto;
+            line-height: 0;
+          }
+        &-box{
+            flex: 33.33%;
+            position: relative;
+            img{
+              width: 100%;
+              height: 100%;
+            }
+            &:hover .overlay{
+                opacity: .8;
+                cursor: pointer;
+            }
+           .overlay{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .1s ease-out;
+            background-color: var(--color-primary-dark);
+
+            &__text{
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%,-50%);
+               @media only screen and (max-width: $bg-iPad){
+                line-height: 1.7;
+              }
+            }
+           }
+        }
+    }
+}
+
+.section-download{
+    padding: 7rem 0;
+    .containerMin{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .heading-primary-dark{
+            text-align: center;
+        }
+    }
+}
+
+.section-contact{
+    padding: 10rem 0;
+    background: var(--color-primary-dark);
+
+    .containerMin{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .boxes{
+            padding: 3rem;
+            display: flex;
+            text-align: center;
+            width: 70%;
+            justify-content: space-between;
+            @media only screen and (max-width: $bg-iPad){
+                padding: 0;
+                width: 80%;
+              }
+              @media only screen and (max-width: $bg-iphone-6){
+                flex-direction: column;
+              }
+            &__phone{
+                &__icon{
+                    font-size: 6rem;
+                    color: var(--color-typography-light);
+                }
+            }
+
+            &__mail{
+                &__icon{
+                    font-size: 6rem;
+                    color: var(--color-typography-light);
+                }
+                a{
+                    text-decoration: none;
+                    color: var(--color-typography-light);
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+.footer{
+    padding: 3rem;
+    @media only screen and (max-width: $bg-iphone-6){
+        padding: 1.7rem;
+        p{
+            font-size: 1.1rem;
+        }
+        span{
+            display: none;
+        }
+      }
+}
